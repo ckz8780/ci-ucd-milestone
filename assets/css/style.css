@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+.home-container-main,
+.about-container-main,
+.media-container-main,
+.booking-container-main {
+    height: 100vh;
+    background: url(../images/wall-guitars.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.home-container-main .jumbotron,
+.about-container-main .jumbotron,
+.media-container-main .jumbotron,
+.booking-container-main .jumbotron {
+    background-color: transparent;
+    color: #fafafa;
+    border: 0;
+}
+
+/*------------------------------------------------------------------NAVBAR*/
+
+.navbar-default {
+    background-color: #f7e102;
+    border-color: #ff00ff;
+    border-bottom-width: 2px;
+    color: #000;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #000;
+}
+
+.navbar-default .navbar-header a {
+    color: #000;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #000;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: #fff;
+    background-color: #ff00ff;
+}
+
