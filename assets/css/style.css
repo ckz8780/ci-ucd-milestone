@@ -18,6 +18,31 @@
     position: relative;
 }
 
+.video-container-main {
+    height: 100vh;
+    background: url(../images/wall-guitars.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container-main .row {
+    height: auto;
+    width: 100%;
+}
+
+.video-wrapper {
+    padding: 30px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px #fff;
+}
+
 .opaque-overlay {
     position: absolute;
     top: 0;
@@ -25,6 +50,13 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, .85);
+}
+
+.opaque-overlay-video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 0, 255, 0.15);
 }
 
 .home-container-main .jumbotron,
@@ -36,6 +68,11 @@
     border: 0;
 }
 
+.videorow {
+    display: block;
+    clear: both;
+}
+
 /*------------------------------------------------------------------NAVBAR*/
 
 .navbar-default {
@@ -43,6 +80,14 @@
     border-color: #ff00ff;
     border-bottom-width: 2px;
     color: #000;
+}
+
+.navbar-default .navbar-nav {
+    margin: 0 -15px;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: transparent;
 }
 
 .navbar-default .navbar-nav li a {
@@ -57,12 +102,33 @@
     background-color: #000;
 }
 
-.navbar-default .navbar-toggle {
-    border-color: #000;
-}
-
-.navbar-default .navbar-nav > .active > a {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
     color: #fff;
     background-color: #ff00ff;
 }
 
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #ff00ff;
+    transition: all .25s ease-in-out;
+}
+
+/*------------------------------------------------------------------NAVBAR TOGGLE BUTTON*/
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    color: #fff;
+    background-color: #ff00ff;
+    transition: all .25s ease-in-out;
+}
+
+.navbar-default .navbar-toggle:focus .icon-bar,
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #fff;
+    transition: all .25s ease-in-out;
+}
