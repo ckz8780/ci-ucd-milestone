@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
+
+/*------------------------------------------------------------------CONTAINERS, WRAPPERS AND OVERLAYS*/
+
 .home-container-main,
 .about-container-main,
 .media-container-main,
@@ -36,6 +39,14 @@
     width: 100%;
 }
 
+.about-container-main,
+.media-container-main,
+.booking-container-main {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+}
+
 .video-wrapper {
     padding: 30px;
     background: black;
@@ -59,6 +70,13 @@
     background-color: rgb(255, 0, 255, 0.15);
 }
 
+#about-container-body,
+#media-container-body,
+#booking-container-body {
+    margin-top: 52px;
+    color: #ecc0cc;
+}
+
 .home-container-main .jumbotron,
 .about-container-main .jumbotron,
 .media-container-main .jumbotron,
@@ -66,11 +84,6 @@
     background-color: transparent;
     color: #fafafa;
     border: 0;
-}
-
-.videorow {
-    display: block;
-    clear: both;
 }
 
 /*------------------------------------------------------------------NAVBAR*/
