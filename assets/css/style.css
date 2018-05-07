@@ -24,6 +24,30 @@ html, body {
     position: relative;
 }
 
+.about-container-main {
+    background: url(../images/about-the-band.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.media-container-main {
+    background: url(../images/record-needle.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.booking-container-main {
+    background: url(../images/instruments.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .video-container-main {
     height: 100vh;
     background: url(../images/wall-guitars.jpg) no-repeat center center fixed;
@@ -63,6 +87,7 @@ html, body {
     left: 0;
     height: 100%;
     width: 100%;
+    background-color: #000; /* Fallback */
     background-color: rgba(0, 0, 0, .85);
 }
 
@@ -70,13 +95,14 @@ html, body {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 0, 255, 0.15);
+    background-color: #000; /* Fallback */
+    background-color: rgba(255, 0, 255, 0.15);
 }
 
 #about-container-body,
 #media-container-body,
 #booking-container-body {
-    margin-top: 52px;
+    margin: 52px auto 270px auto;
     color: #ecc0cc;
 }
 
@@ -92,10 +118,22 @@ html, body {
 /*------------------------------------------------------------------NAVBAR*/
 
 .navbar-default {
-    background-color: #f7e102;
+    background-color: rgb(247, 225, 2); /* Fallback */
+    background-color: rgba(247, 225, 2, 0.80);
     border-color: #ff00ff;
     border-bottom-width: 2px;
     color: #000;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-weight: 700;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: #ff00ff;
+    transition: all .25s ease-in-out;
 }
 
 .navbar-default .navbar-nav {
@@ -152,7 +190,7 @@ html, body {
 /*------------------------------------------------------------------ABOUT PAGE*/
 
 .band-member {
-    background-color: #000;
+    background-color: #000; /* Fallback */
     background-color: rgba(0, 0, 0, .55);
     color: #e7e7e7;
     padding: 15px;
@@ -175,7 +213,8 @@ html, body {
     display: block;
     margin: 20px 0px 20px -15px;
     box-shadow: 0px 0px 10px #ff00ff;
-    border-color: rgba(255,0,255,0.25);
+    border-color: #ff00ff; /* Fallback */
+    border-color: rgba(255, 0, 255, 0.25);
 }
 
 .band-member .member-instrument {
@@ -183,3 +222,18 @@ html, body {
     font-style: italic;
     letter-spacing: .75rem;
 }
+
+/*------------------------------------------------------------------FOOTER*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(247, 225, 2); /* Fallback */
+    background-color: rgba(247, 225, 2, 0.80);
+    border-top: 2px solid #ff00ff;
+    color: #000;
+    min-height: 50px;
+}
+
