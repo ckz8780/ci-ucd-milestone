@@ -189,16 +189,18 @@ html, body {
 
 /*------------------------------------------------------------------ABOUT PAGE*/
 
-.band-member {
+.band-member, .media-item {
     background-color: #000; /* Fallback */
     background-color: rgba(0, 0, 0, .55);
     color: #e7e7e7;
     padding: 15px;
     margin: 15px 0px 0px 0px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #ff00ff;
+    box-shadow: 0px 0px 10px #221d16;
     min-height: 365px;
 }
+
+
 
 .band-member img {
     float: left;
@@ -208,19 +210,90 @@ html, body {
     width: 257px;
 }
 
-.band-member .shortdivider {
+.band-member .shortdivider,
+.media-item .shortdivider {
     width: 35%;
     display: block;
-    margin: 20px 0px 20px -15px;
+    margin: 20px 0px;
     box-shadow: 0px 0px 10px #ff00ff;
     border-color: #ff00ff; /* Fallback */
     border-color: rgba(255, 0, 255, 0.25);
 }
 
-.band-member .member-instrument {
+.band-member .member-instrument,
+.media-item .album-name {
     font-weight: 100;
     font-style: italic;
     letter-spacing: .75rem;
+}
+
+/*------------------------------------------------------------------MEDIA PAGE*/
+
+.audio-wrapper audio {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.media-item {
+    min-height: 450px;
+    display: table;
+    box-shadow: 0px 0px 10px #222;
+}
+
+.media-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.song-desc a {
+    text-decoration: none;
+    margin-left: 5px;
+    font-style: italic;
+    font-weight: 100;
+    color: #ff00ff; /* Fallback */
+    color: rgba(255, 0, 255, 0.50);
+    transition: color .25s ease-in-out
+}
+
+.song-desc a:hover {
+    color: #ff00ff;
+}
+
+/*------------------------------------------------------------------BOOKING PAGE*/
+
+.booking-form {
+    background-color: #000; /* Fallback */
+    background-color: rgba(0, 0, 0, .55);
+    color: #e7e7e7;
+    padding: 15px;
+    margin: 15px 0px 0px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #221d16;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.booking-form label[for="booking-date"],
+.booking-form button {
+    margin-top: 10px;
+}
+
+.booking-form label {
+    color: #666;
+}
+
+.booking-form .lead {
+    color: #e7e7e7;
+}
+
+.booking-form #event-details-lead {
+    margin-top: 50px;
+}
+
+.booking-form .personal-details,
+.booking-form .event-details {
+    padding-left: 25px;
 }
 
 /*------------------------------------------------------------------FOOTER*/
@@ -237,3 +310,30 @@ footer {
     min-height: 50px;
 }
 
+/*------------------------------------------------------------------MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+    .band-member, .media-item, .booking-form {
+        text-align: center;
+    }
+    
+    .band-member img {
+        float: none;
+        margin: 10px auto;
+    }
+    .band-member .shortdivider,
+    .media-item .shortdivider {
+        margin: 20px auto;
+    }
+    
+    .booking-form .personal-details,
+    .booking-form .event-details {
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .media-item {
+        min-height: 475px;
+    }
+}

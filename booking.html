@@ -43,17 +43,32 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					BLOCK
-				</div>
-				<div class="col-xs-12 col-md-6">
-					BLOCK
-				</div>
-				<div class="col-xs-12 col-md-6">
-					BLOCK
-				</div>
-				<div class="col-xs-12 col-md-6">
-					BLOCK
+				<div class="col-xs-12 col-md-8 col-md-offset-2">
+					<div class="booking-form">
+						<form method="post" action="/booking.html">
+							<p class="lead">Personal Details:</p>
+							<div class="personal-details">
+								<input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required />
+								<input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required />
+								<input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required />
+							</div>
+							<p class="lead" id="event-details-lead">Event Details:</p>
+							<div class="event-details">
+								<label for="booking-type" class="control-label">Event Type:</label>
+								<select name="booking-type" id="booking-type" class="form-control">
+									<option selected>Personal Event (At your residence)</option>
+									<option>Wedding</option>
+									<option>Bar/Restaurant Event</option>
+									<option>Corporate Event</option>
+									<option>Other (Explain in comments)</option>
+								</select>
+								<label for="booking-date" class="control-label">Requested Booking Date:</label>
+								<input type="date" name="booking-date" class="form-control" id="booking-date" placeholder="Book Date">
+								<textarea rows="5" name="comments" class="form-control" id="comments" placeholder="Comments/Special Requests (Optional)"></textarea>
+							</div>
+							<button type="submit" class="btn btn-success center-block btn-lg">Submit Booking Request</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
